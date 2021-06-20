@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-demo';
+  title = 'angular-liu';
+
+
+  identity<T>(arg: T): T {
+    return arg;
+  }
+
+  onClick1(): void {
+    const a = this.identity('hello world');
+    console.log('a -->', a);
+
+    const b = this.identity(9527);
+    console.log('b -->', b);
+  }
 }
